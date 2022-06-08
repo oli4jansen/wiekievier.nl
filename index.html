@@ -27,10 +27,7 @@
   <link rel="manifest" href="/site.webmanifest">
 
 </head>
-<body onload="showSentence()">
-
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<body>
 
   <style>
     .message-rotate,
@@ -177,44 +174,6 @@ Nu dat we er zijn”
       </div>
     </div>
   </div>
-
-  <script type="text/javascript">
-    function showSentence() {
-      var element = document.getElementById('sentence');
-
-      var sentences = [
-      ``,
-        `Neem intussen een Klopfer. `,
-        'Alleen maar een beetje overloop-diarree',
-        'Nog maar een beetje laxulon dan',
-        //'Nee, en dan te bedenken dat z\'n laatste echte maaltijd chili sin carne was...',
-        // 'Daar is ie veel te high voor, joh! Laaaaaiiooon.',
-        //'Nee joh, nog steeds niet. Anders had je het echt wel geroken. Zelfs in Nederland.',
-        'Dat is niet zo laaion maar check het snel weer want misschien eet hij nu wel een blokje kaas.',
-        //'Dat is niet zo laaion maar de zuster geeft nu laxeermiddel dus kom snel terug.',
-        //'Bij de eerste poging kwam er alleen nog maar lucht uit.',
-        //'MAAR er ging zojuist een zetpil in. Komt dat zien.',
-        //'Het kan echter niet lang meer duren. De spanning is om te snijden.',
-        //'Laaion? Dacht het niet. Maar je kent GJ nog niet als je denkt dat hij niet ieder moment kan gaan scheiten nu.',
-        //'Nog steeds niet. Inmiddels is het een personal best voor GJ om zolang niet te kakken. Dat is wel weer laaion.'
-      ];
-
-      var selected = Math.floor(Math.random() * sentences.length);
-      element.innerHTML = sentences[selected];
-
-      if (selected === 0) {
-        var a = document.createElement('a');
-        a.setAttribute('href', 'https://youtu.be/pjqBQu0Tn14?t=75');
-        a.innerHTML = `Liggend ken je scheiten maar 't is beter als je zit.`;
-        element.appendChild(a);
-      } else if (selected === 1) {
-        var img = document.createElement('img');
-        img.setAttribute('src', 'images/klopfer.png');
-        img.setAttribute('width', '150');
-        element.appendChild(img);
-      }
-    }
-  </script>
 
 </body>
 </html>
