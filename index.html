@@ -35,21 +35,124 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-  <img src="images/uitnodiging.png" alt="Wees uitgenodigd" width="100%">
+  <style>
+    .message-rotate,
+    .message-scroll {
+      display: none;
+      font-size: 12px;
+      z-index: 1000;
+      background-color: rgba(255, 0, 217);
+      color: white;
+      position: absolute;
+      line-height: 30px; top: 20px; box-shadow: 10px 10px 25px rgba(0,0,0,0.5); left: 50%; margin-left: -90px; height: 30px; padding: 0 25px;
+      border-radius: 100px;
+    }
+    .message-scroll {
+      background-color: black;
+    }
+
+    .container, .uitnodiging {
+      display: none;
+    }
+
+    @keyframes blinker {
+      50% {
+        background-color: rgba(255, 0, 217, 0.75);
+      }
+    }
+    @media screen and (orientation:portrait) {
+      .message-rotate {
+        display: block;
+        animation: blinker 0.25s linear infinite;
+      }
+    }
+    @media screen and (orientation:landscape) {
+      .message-scroll {
+        display: block;
+      }
+      .container, .uitnodiging {
+        display: block;
+      }
+    }
+  </style>
+
+  <img src="images/uitnodiging.png" alt="Wees uitgenodigd" width="100%" class="uitnodiging">
+
+  <div class="message-rotate">
+    Draai je telefoon aub!
+  </div>
+
+  <div class="message-scroll">
+    Scroll naar beneden!
+  </div>
 
   <div class="container">
     <div class="row">
       <div class="one-half column">
         <br><br>
-        <h1 style="font-weight: bold;">NEEN.</h1>
-        <p style="font-size: 1.75rem;">
-          Sinds vrijdag zit 't weer op slot.
+        <p style="font-weight: bold; opacity: 0.5;">Zoals wijze witte mannen <a href="https://www.youtube.com/watch?v=g2RbSa5o9Bg" target="_blank">ooit al zongen</a>:</p>
+        <p style="font-size: 1.75rem; font-style: italic;">
+          “De reis alleen heeft veel meer waarde<br>
+Dan het eindpunt<br>
+Dus hang zelf die slingers op<br>
+Y a la meta tu vas a llegar<br>
+Kom hef je glas met mij<br>
+Nog una mas met mij<br>
+Want deze mooie tijd<br>
+Gaat veel te snel voorbij<br>
+Dus zet de avond<br>
+Voor heel even stil met mij<br>
+Laten we proosten op dat wat we hebben<br>
+Nu dat we er zijn”
         </p>
-        <!-- <p style="font-size: 1.75rem;">
-          Neem 'n Klopfer om 't te vieren!<br>
-          <img src="images/klopfer.png" width="150">
-        </p>-->
-        <p style="font-size: 1.75rem;" id="sentence"></p>
+
+        <p style="font-size: 1.75rem;">
+          Ofterwijl: Elke dag is er reden voor een feestje.
+          Elke dag, dus ook op <u>30 juli 2022</u>.
+          Precies om deze prachtige reden vieren wij exact dán een feestje!
+          Daarnaast hebben we ook heel wat (wiekie)vieringen in te halen: zes verjaardagen, twee nieuwe banen, een koophuis, een gedeeld bed en veeeeeel Strava-kudo's.
+        </p>
+        
+        <p style="font-size: 1.75rem;">
+          Wiekievier zou Wiekievier niet zijn als je wel wat moet doen voordat je aan de alcohol mag.
+          We laten onze langgedroomde droom der dromen in vervulling gaan: WE ORGANISEREN EEN TOERTOCHT!
+          En JIJ bent uitgenodigd.
+          We hebben summier en met oog voor (koffie)detail een route van ±60 km uitgezet die jij samen met je stalen ros én ons mag afleggen.
+          Ieder op z'n eigen tempo, net als in 't echte leven.
+          We starten om 13:30 uur.
+          De onthulling van de startlocatie volgt later, maar is in de Domstad.
+        </p>
+
+        <p style="font-size: 1.75rem;">
+          Daarna volgt de kers op de wielrentaart: DE BORREL.
+          In ons paleis op de <a href="https://goo.gl/maps/qEnUZNTrKNRSjynj7" target="_blank">Ridderlaan</a> wachten genoeg exotische versnaperingen met smart om opgedronken te worden.
+          Zorg dat je bezweet genoeg bent want dan mag je bij ons douchen.
+          Zoals je van ons gewend bent is er geen eindtijd voor dit festijn.
+        </p>
+
+        <a class="button" href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20220730T113000Z%2F20220730T215900Z&details=De%20dag%20van%20je%20leven&location=Ridderlaan%2033-2%2C%20Utrecht&text=Wiekievier%20Toertocht%20%2B%20Borrel">Voeg toe aan Google Calendar</a>
+        <a class="button" href="./wiekievier.ics">Voeg toe aan mijn agenda</a>
+
+        <br><br>
+
+        <p style="font-size: 1.75rem;">
+          <b>Is fietsen niks voor jou, maar borrelen wel?</b>
+          Dat kan. Snappen we. Dan kom je toch gewoon alleen borrelen? Mag je alleen niet douchen.
+        </p>
+
+        
+        <p style="font-size: 1.75rem;">
+          <b>Is borrelen niks voor jou, maar fietsen wel?</b> Dan mag je helaas niet komen. 
+        </p>
+
+        <br>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
 
       </div>
     </div>
